@@ -1,0 +1,16 @@
+- Upload the Arduino Code.
+- Open the MATLAB App.
+- Click connect.
+- The App will receive a message separated by ",".
+- It will appear in the receive text box and the second data will be gauged.
+- Type "ON" or "OFF" in the send text box and press send.
+- It will turn on or turn off the built-in LED in the microcontrolled respectively.
+
+Arduino to MATLAB
+Serial.println() -> fgets()
+"Hello" (\r\n are added by the Serial.println() automatically) will be received as "Hello\r\n"
+
+MATLAB to Arduino
+fwrite() (add newline at the end of message) -> Serial.readStringUntil('\n')
+"Hello\n" will be received as "Hello" 
+
